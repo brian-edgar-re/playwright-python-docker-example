@@ -1,8 +1,7 @@
 version: "3.9"
 services:
   playwright_python:
-    image: example_playwright_python
+    build: .
+    init: true  # enable in case you want to run in headed mode
     environment:
       - DEBUG=pw:browser*
-      - PWDEBUG=1
-    # build: .
